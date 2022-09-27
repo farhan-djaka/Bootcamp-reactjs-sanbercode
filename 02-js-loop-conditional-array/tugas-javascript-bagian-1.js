@@ -18,6 +18,15 @@ let world = 'world!!';
 console.log(hello.concat(world));
 
 //soal 4/
+
+let panjangPP = "8";
+let editpp = parseInt(panjangPP)
+let lebarPP = "5";
+let editLP = parseInt(lebarPP)
+let kelilingPP = 2 * (editpp + editLP );
+
+console.log(kelilingPP)
+
 //soal 5/
 let sentences= 'wah javascript itu keren sekali'; 
 
@@ -113,3 +122,39 @@ for (let index2 = 0; index2 < 10; index2++) {
 }
 
 //soal 14/
+
+let array1 = [1,2,3,4,5,6]
+console.log(array1[5])
+
+//soal 15/
+
+let array2 = [5,2,4,1,3,5]
+array2.sort()
+console.log(array2)
+
+//soal 16/
+
+let array3 = ["selamat", "anda", "melakukan", "perulangan", "array", "dengan", "for"]
+
+for (let i = 0; i < array3.length; i++) {
+    console.log (array3[i]);}
+
+//soal 17/
+
+let array4 = [1, 2, 3, 4, 5, 6,7, 8, 9, 10]
+
+for (let array4 = 0; array4 < 11; array4++) {
+    if (array4 %2 == 0) {
+        console.log(array4)}}
+
+//soal 18/
+
+let kalimat= ["saya", "sangat", "senang", "belajar", "javascript"]
+var anjir = kalimat.join("-")
+console.log(anjir)
+
+//soal 19/
+
+var sayuran = []
+sayuran.push('kangkung','bayam','buncis','kubis','timun','sledri','tauge')
+console.log(sayuran)
