@@ -44,14 +44,14 @@ console.log(buahberbiji)
 //soal 06/
 
 let phone = {
-  name: "Galaxy Note 20",
+  nameS: "Galaxy Note 20",
   brand: "Samsung",
   year: 2020
 };
 
-const {name,brand,year} = phone
+const {nameS,brand,year} = phone
 
-console.log(name, brand, year) 
+console.log(NAMS, brand, year) 
 
 //soal 7/
 
