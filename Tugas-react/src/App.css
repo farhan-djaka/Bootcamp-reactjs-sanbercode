@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #2C3333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: beige;
+}
+
+.navbar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
