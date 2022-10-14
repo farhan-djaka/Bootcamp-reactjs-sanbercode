@@ -13,3 +13,31 @@
     object-fit: cover;
 }
 
+.banner {
+    display: flex;
+    color: beige;
+}
+
+.banner img {
+    width: 200%;
+    height: 250px;
+}
+
+.pahlawan {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    background-color: rgb(54, 54, 54);
+    color: aliceblue;
+}
+
+.pahlawan img {
+    padding-right: 50px;
+    width: 250px;
+    height: auto
+}
+
+.button {
+    width: 20%;
+}
