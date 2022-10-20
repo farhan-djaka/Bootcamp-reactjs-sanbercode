@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Gambar from "../asset/Farhan.jpg"
+import Gambar from "../../asset/Farhan.jpg"
 
    
 

@@ -1,17 +1,10 @@
 import React from "react"
 import "./App.css"
-import Article from "./components/Article"
-import Hero from "./components/Hero"
-import Navbar from "./components/navbar"
+import Tugas4 from "./Tugas4/Tugas4"
 
 const App = () => {
-    return(<div>  
-    <Navbar/>
-    <Hero/>
-    <Article/>
-</div>
-  
-    )
-}
+    return(<>  
+    {/* <Tugas4/> */}
+</>)}
 
 export default App
