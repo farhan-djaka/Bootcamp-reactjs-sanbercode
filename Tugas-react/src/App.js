@@ -1,50 +1,83 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./App.css"
-import { Navbar } from "flowbite-react"
-
+import axios from "axios"
+import { Table } from "flowbite-react"
+ 
 
 const App = () => {
-    return(<>
+  const [data, setData] = useState(null)
 
+  useEffect(() => {
+
+    axios.get("https://backendexample.sanbercloud.com/api/student-scores")
+  .then((res)=>{
+    console.log(res.data)
+    setData(res.data)
+  })
+  .catch((erorr) => {
+  })
+
+  }, [])
   
+return (
+<Table striped={true}>
+  <Table.Head>
+    <Table.HeadCell>
+    No
+    </Table.HeadCell>
+    <Table.HeadCell>
+    course
+    </Table.HeadCell>
+    <Table.HeadCell>
+    created_at
+    </Table.HeadCell>
+    <Table.HeadCell>
+    id
+    </Table.HeadCell>
+    <Table.HeadCell>
+    name
+    </Table.HeadCell>
+    <Table.HeadCell>
+    score
+    </Table.HeadCell>
+    <Table.HeadCell>
+    updated_at
+    </Table.HeadCell>
 
-
-    <Navbar
-  fluid={true}
-  rounded={true}
->
-  <Navbar.Brand href="https://flowbite.com/">
-    <img
-      src="https://flowbite.com/docs/images/logo.svg"
-      className="mr-3 h-6 sm:h-9"
-      alt="Flowbite Logo"
-    />
-    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-      Flowbite
-    </span>
-  </Navbar.Brand>
-  <Navbar.Toggle />
-  <Navbar.Collapse>
-    <Navbar.Link
-      href="/navbars"
-      active={true}
-    >
-      Home
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      About
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Services
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Pricing
-    </Navbar.Link>
-    <Navbar.Link href="/navbars">
-      Contact
-    </Navbar.Link>
-  </Navbar.Collapse>
-</Navbar>
-    </>)}
+    
+    <Table.HeadCell>
+      <span className="sr-only">
+        Edit
+      </span>
+    </Table.HeadCell>
+  </Table.Head>
+  <Table.Body className="divide-y">
+ {data !== null && data.map((element ,i)=>(
+    <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+      <Table.Cell>
+      {i +1}
+    </Table.Cell>
+    <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+      {element.course}
+    </Table.Cell>
+    <Table.Cell>
+      {element.created_at}
+    </Table.Cell>
+    <Table.Cell>
+      {element.id}
+    </Table.Cell>
+    <Table.Cell>
+     {element.name}
+    </Table.Cell>
+    <Table.Cell>
+     {element.score}
+    </Table.Cell>
+    <Table.Cell>
+      {element.updated_at}
+    </Table.Cell>
+  </Table.Row>
+ ))}
+  </Table.Body>
+</Table>)}
 
 export default App

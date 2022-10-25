@@ -1,0 +1,20 @@
+ <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+      <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+        mtk
+      </Table.Cell>
+      <Table.Cell>
+       Madiun
+      </Table.Cell>
+      <Table.Cell>
+        50
+      </Table.Cell>
+      <Table.Cell>
+        nisa
+      </Table.Cell>
+      <Table.Cell>
+        100
+      </Table.Cell>
+      <Table.Cell>
+        Magetan
+      </Table.Cell>
+    </Table.Row>
