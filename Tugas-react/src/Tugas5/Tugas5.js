@@ -7,6 +7,24 @@ import { Table } from "flowbite-react"
 const Tugas5 = () => {
   const [data, setData] = useState(null)
 
+  const hitung = (nilai) => {
+    if (nilai >= 80) {
+      return "A njay"
+    }
+    if (nilai >= 70 && nilai < 80) {
+      return "B aik"
+    }
+    if (nilai >= 60 && nilai < 70) {
+      return "C akep"
+    }
+    if (nilai >= 50 && nilai < 60) {
+      return "D on't give up"
+    }
+    if (nilai < 50) {
+      return "E scape from here quickly"
+    }
+  }
+
   useEffect(() => {
 
     axios.get("https://backendexample.sanbercloud.com/api/student-scores")
@@ -21,28 +39,24 @@ const Tugas5 = () => {
   
 return (
 <Table striped={true}>
-  <Table.Head cl>
+  <Table.Head className="bg bg-red-400">
     <Table.HeadCell>
-    No
+      No
     </Table.HeadCell>
     <Table.HeadCell>
-    course
+      Mata kuliah
     </Table.HeadCell>
     <Table.HeadCell>
-    created_at
+      Nama Mahasiswa
     </Table.HeadCell>
     <Table.HeadCell>
-    id
+      Nilai
     </Table.HeadCell>
     <Table.HeadCell>
-    name
+      Predikat
     </Table.HeadCell>
-    <Table.HeadCell>
-    score
-    </Table.HeadCell>
-    <Table.HeadCell>
-    updated_at
-    </Table.HeadCell>
+
+
 
     
     <Table.HeadCell>
@@ -61,19 +75,13 @@ return (
       {element.course}
     </Table.Cell>
     <Table.Cell>
-      {element.created_at}
-    </Table.Cell>
-    <Table.Cell>
-      {element.id}
-    </Table.Cell>
-    <Table.Cell>
      {element.name}
     </Table.Cell>
     <Table.Cell>
      {element.score}
     </Table.Cell>
-    <Table.Cell>
-      {element.updated_at}
+    <Table.Cell class = "py-4 px-6">
+      {hitung(element.score)}
     </Table.Cell>
   </Table.Row>
  ))}
