@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react"
-import "./App.css"
+import React from "react";
 import Tugas4 from "./Tugas4/Tugas4"
 import Tugas5 from "./Tugas5/Tugas5"
+import Tugas6 from "./Tugas6/Tugas6"
 
 const App = () => {
-  return(<>
-  {/* <Tugas4/> */}
-  <Tugas5/>
-</>)
+  return (<>
+    {/* <Tugas4/> */}
+    {/* <Tugas5/> */}
+    <Tugas6/>
+    </>
+  )  
 }
 
 export default App

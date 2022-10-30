@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Gambar from "../../asset/Farhan.jpg"
+import Gambar from "../asset/Farhan.jpg"
 
    
 
@@ -25,7 +25,7 @@ console.log(display)
     : 
     ""
     }
-                <button onClick= {handledisplay} className="button">tampilkan pembuat article</button>
+                <button onClick = {handledisplay} className  ="button">tampilkan pembuat article</button>
             </div>
     )
 }

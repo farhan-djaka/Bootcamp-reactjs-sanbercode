@@ -1,8 +1,8 @@
 import React from "react"
 import "../App.css"
-import Article from "./Component_Tugas4/Article"
-import Hero from "./Component_Tugas4/Hero"
-import Navbar from "./Component_Tugas4/Navbar"
+import Article from "../components/Article"
+import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
 
 const Tugas4 = () => {
     return(<>
