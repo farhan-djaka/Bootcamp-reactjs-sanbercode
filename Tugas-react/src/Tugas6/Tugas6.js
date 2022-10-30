@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
+import { Table } from 'flowbite-react'
 
 const Tugas6 = () => {
 
@@ -125,17 +126,56 @@ const Tugas6 = () => {
     <>
       <div>
         <ul>
-          {data !== null && data.map((res) => {
-            return (
-              <>
-                <li>
-                  {res.name} | &nbsp;
-                  <button onClick={handleEdit} value={res.id}>edit</button>
-                  <button onClick={handleDelete} value={res.id}>delete</button>
-                </li>
-              </>
-            )
-          })}
+        <Table striped={true}>
+  <Table.Head cl>
+    <Table.HeadCell>
+    No
+    </Table.HeadCell>
+    <Table.HeadCell>
+    name
+    </Table.HeadCell>
+    <Table.HeadCell>
+    matakuliah
+    </Table.HeadCell>
+    <Table.HeadCell>
+    score
+    </Table.HeadCell>
+    <Table.HeadCell>
+    Edit
+    </Table.HeadCell>
+
+ 
+
+    
+    <Table.HeadCell>
+      <span className="sr-only">
+        Edit
+      </span>
+    </Table.HeadCell>
+  </Table.Head>
+  <Table.Body className="divide-y">
+ {data !== null && data.map((element ,i)=>(
+    <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+      <Table.Cell>
+      {i +1}
+    </Table.Cell>
+    <Table.Cell>
+     {element.name}
+    </Table.Cell>
+    <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
+      {element.course}
+    </Table.Cell>
+    <Table.Cell>
+     {element.score}
+    </Table.Cell>
+    <Table.Cell>
+    <button onClick={handleEdit} value={element} >edit</button>
+    </Table.Cell>
+  </Table.Row>
+ ))}
+  </Table.Body>
+</Table>
+
         </ul>
       </div>
 
@@ -153,4 +193,5 @@ const Tugas6 = () => {
 }
 
 export default Tugas6
+
 
