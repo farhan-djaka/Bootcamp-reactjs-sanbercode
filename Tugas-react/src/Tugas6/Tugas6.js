@@ -152,7 +152,7 @@ const Tugas6 = () => {
         <ul>
 
         <Table striped={true}>
-  <Table.Head className="bg bg-red-400">
+  <Table.Head className="bg-orange-500">
     <Table.HeadCell>
       No
     </Table.HeadCell>
@@ -172,7 +172,7 @@ const Tugas6 = () => {
       Action
     </Table.HeadCell>
   </Table.Head>
-  <Table.Body className="divide-y">
+  <Table.Body className="bg-amber-500-divide-y">
  {data !== null && data.map((element ,i)=>(
     <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
       <Table.Cell>
@@ -190,9 +190,10 @@ const Tugas6 = () => {
     <Table.Cell class = "py-4 px-6">
       {hitung(element.score)}
     </Table.Cell>
-    <Table.Cell>
-                  <button onClick={handleEdit} value={element.id}>edit</button>
-                  <button onClick={handleDelete} value={element.id}>delete</button>
+    <Table.Cell className='space-x-1.5 > * + *	margin-left: 0.375rem; 
+    /* 6px */ text-black	color: rgb(0 0 0);Aa rounded-2xl	border-radius: 1rem; /* 16px */'>
+                  <button className='bg-green-400 ' onClick={handleEdit} value={element.id}>edit</button>
+                  <button className='bg-red-600' onClick={handleDelete} value={element.id}>delete</button>
     </Table.Cell>
   </Table.Row>
  ))}
@@ -205,17 +206,20 @@ const Tugas6 = () => {
       <p>FORM DATA</p>
       {/* form data */}
 
-      <form onSubmit={handleSubmit}>
-        <span> Nama : </span>
-        <input onChange={handleInput} value={input.name} name='name' />
+      <form className= 'grid grid-cols-2 gap-4 w-1/4	width: 25%;' onSubmit={handleSubmit}>
+        <span className='bg-orange-400'> Nama : </span>
+        <input className='border-2	border-width: 2px 	; border-black'
+        onChange={handleInput} value={input.name} name='name' />
 
-        <span> Matkul : </span>
-        <input onChange={handleInput} value={input.course} name='course' />
+        <span className='bg-orange-400'> Matkul : </span>
+        <input className='border-2	border-width: 2px 	; border-black'
+        onChange={handleInput} value={input.course} name='course' />
 
-        <span> Nilai : </span>
-        <input onChange={handleInput} value={input.score} name='score' />
+        <span className='bg-orange-400'> Nilai : </span>
+        <input className='border-2	border-width: 2px 	; border-black' 
+        onChange={handleInput} value={input.score} name='score' />
 
-        <input type={'submit'} />
+        <input className=' bg-red-400 ' type={'submit'} />
       </form>
     </>
   )
