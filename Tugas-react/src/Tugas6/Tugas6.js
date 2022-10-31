@@ -10,6 +10,24 @@ const Tugas6 = () => {
   //materi fetching data
   const [data, setData] = useState(null)
 
+  const hitung = (nilai) => {
+    if (nilai >= 80) {
+      return "A njay"
+    }
+    if (nilai >= 70 && nilai < 80) {
+      return "B aik"
+    }
+    if (nilai >= 60 && nilai < 70) {
+      return "C akep"
+    }
+    if (nilai >= 50 && nilai < 60) {
+      return "D on't give up"
+    }
+    if (nilai < 50) {
+      return "E scape from here quickly"
+    }
+  }
+
   //materi create data
   const [input, setInput] = useState(
     {
@@ -27,7 +45,7 @@ const Tugas6 = () => {
 
     //fetch data dengan kondisi
     if (fetchStatus === true) {
-      axios.get("http://backendexample.sanbercloud.com/api/contestants")
+      axios.get(`https://backendexample.sanbercloud.com/api/student-scores`)
         .then((res) => {
           setData([...res.data])
         })
@@ -48,6 +66,12 @@ const Tugas6 = () => {
     if (name === "name") {
       setInput({ ...input, name: value })
     }
+    if (name === "course") {
+      setInput({ ...input, course: value })
+    }
+    if (name === "score") {
+      setInput({ ...input, score: value })
+    }
 
   }
 
@@ -57,13 +81,13 @@ const Tugas6 = () => {
     event.preventDefault()
 
     let {
-      name
+      name,course,score
     } = input
 
     if (currentId === -1) {
 
       //create data
-      axios.post('https://backendexample.sanbercloud.com/api/contestants', { name })
+      axios.post('https://backendexample.sanbercloud.com/api/student-scores', { name, course , score})
         .then((res) => {
           console.log(res)
           setFetchStatus(true)
@@ -72,7 +96,7 @@ const Tugas6 = () => {
     }else{
 
         // update data
-        axios.put(`https://backendexample.sanbercloud.com/api/contestants/${currentId}`, {name})
+        axios.put(`hhttps://backendexample.sanbercloud.com/api/student-scores/`, {name})
         .then((res) => {
           setFetchStatus(true)
         })
@@ -96,7 +120,7 @@ const Tugas6 = () => {
   const handleDelete = (event) => {
     let idData = parseInt(event.target.value)
 
-    axios.delete(`https://backendexample.sanbercloud.com/api/contestants/${idData}`)
+    axios.delete(`https://backendexample.sanbercloud.com/api/student-scores/${idData}`)
       .then((res) => {
         setFetchStatus(true)
       })
@@ -108,7 +132,7 @@ const Tugas6 = () => {
 
     setCurrentId(idData)
 
-    axios.get(`https://backendexample.sanbercloud.com/api/contestants/${idData}`)
+    axios.get(`https://backendexample.sanbercloud.com/api/student-scores/${idData}`)
       .then((res) => {
         let data = res.data
 
@@ -126,31 +150,26 @@ const Tugas6 = () => {
     <>
       <div>
         <ul>
+
         <Table striped={true}>
-  <Table.Head cl>
+  <Table.Head className="bg bg-red-400">
     <Table.HeadCell>
-    No
+      No
     </Table.HeadCell>
     <Table.HeadCell>
-    name
+      Nama Mahasiswa
     </Table.HeadCell>
     <Table.HeadCell>
-    matakuliah
+      Mata kuliah
     </Table.HeadCell>
     <Table.HeadCell>
-    score
+      Nilai
     </Table.HeadCell>
     <Table.HeadCell>
-    Edit
+      Predikat
     </Table.HeadCell>
-
- 
-
-    
     <Table.HeadCell>
-      <span className="sr-only">
-        Edit
-      </span>
+      Action
     </Table.HeadCell>
   </Table.Head>
   <Table.Body className="divide-y">
@@ -168,8 +187,12 @@ const Tugas6 = () => {
     <Table.Cell>
      {element.score}
     </Table.Cell>
+    <Table.Cell class = "py-4 px-6">
+      {hitung(element.score)}
+    </Table.Cell>
     <Table.Cell>
-    <button onClick={handleEdit} value={element} >edit</button>
+                  <button onClick={handleEdit} value={element.id}>edit</button>
+                  <button onClick={handleDelete} value={element.id}>delete</button>
     </Table.Cell>
   </Table.Row>
  ))}
@@ -183,8 +206,15 @@ const Tugas6 = () => {
       {/* form data */}
 
       <form onSubmit={handleSubmit}>
-        <span>Nama : </span>
+        <span> Nama : </span>
         <input onChange={handleInput} value={input.name} name='name' />
+
+        <span> Matkul : </span>
+        <input onChange={handleInput} value={input.course} name='course' />
+
+        <span> Nilai : </span>
+        <input onChange={handleInput} value={input.score} name='score' />
+
         <input type={'submit'} />
       </form>
     </>
