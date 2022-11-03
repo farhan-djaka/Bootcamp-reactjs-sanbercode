@@ -6,8 +6,8 @@ import Tugas6 from "./Tugas6/Tugas6"
 const App = () => {
   return (<>
     {/* <Tugas4/> */}
-    {/* <Tugas5/> */}
-    <Tugas6/>
+    <Tugas5/>
+    {/* <Tugas6/> */}
     </>
   )  
 }
