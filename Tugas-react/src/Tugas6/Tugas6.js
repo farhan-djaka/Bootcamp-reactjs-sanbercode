@@ -7,38 +7,44 @@ import { Table } from 'flowbite-react'
 
 const Tugas6 = () => {
 
-  //materi fetching data
   const [data, setData] = useState(null)
 
   const hitung = (nilai) => {
     if (nilai >= 80) {
-      return "A njay"
+      return (<div className="bg-lime-400 flex justify-center">
+      A
+    </div>)
     }
     if (nilai >= 70 && nilai < 80) {
-      return "B aik"
+      return (<div className="bg-yellow-300 flex justify-center">
+      B
+    </div>)
     }
     if (nilai >= 60 && nilai < 70) {
-      return "C akep"
+      return (<div className="bg-orange-500 flex justify-center">
+      C
+    </div>)
     }
     if (nilai >= 50 && nilai < 60) {
-      return "D on't give up"
+      return (<div className="bg-red-700 flex justify-center  text-teal-50">
+        D
+      </div>)
     }
     if (nilai < 50) {
-      return "E scape from here quickly"
+      return (<div className="bg-red-700 flex justify-center text-teal-50">
+      E
+    </div>) 
     }
   }
 
-  //materi create data
   const [input, setInput] = useState(
     {
       name: ""
     }
   )
 
-  //indikator
   const [fetchStatus, setFetchStatus] = useState(true)
 
-  //indikator
   const [currentId, setCurrentId] = useState(-1)
 
   useEffect(() => {
@@ -57,7 +63,6 @@ const Tugas6 = () => {
 
   }, [fetchStatus, setFetchStatus])
 
-  //handling input
   const handleInput = (event) => {
 
     let name = event.target.name
@@ -75,7 +80,6 @@ const Tugas6 = () => {
 
   }
 
-  //handling submit
   const handleSubmit = (event) => {
 
     event.preventDefault()
@@ -190,10 +194,9 @@ const Tugas6 = () => {
     <Table.Cell class = "py-4 px-6">
       {hitung(element.score)}
     </Table.Cell>
-    <Table.Cell className='space-x-1.5 > * + *	margin-left: 0.375rem; 
-    /* 6px */ text-black	color: rgb(0 0 0);Aa rounded-2xl	border-radius: 1rem; /* 16px */'>
-                  <button className='bg-green-400 ' onClick={handleEdit} value={element.id}>edit</button>
-                  <button className='bg-red-600' onClick={handleDelete} value={element.id}>delete</button>
+    <Table.Cell className='text-white gap-x-2 flex'>
+                  <button className='bg-green-400 rounded-lg' onClick={handleEdit} value={element.id}>edit</button>
+                  <button className='bg-red-600 rounded-lg' onClick={handleDelete} value={element.id}>delete</button>
     </Table.Cell>
   </Table.Row>
  ))}
@@ -206,7 +209,7 @@ const Tugas6 = () => {
       <p>FORM DATA</p>
       {/* form data */}
 
-      <form className= 'grid grid-cols-2 gap-4 w-1/4	width: 25%;' onSubmit={handleSubmit}>
+      <form className= 'grid grid-cols-2 gap-4 w-1/6	width: 25%;' onSubmit={handleSubmit}>
         <span className='bg-orange-400'> Nama : </span>
         <input className='border-2	border-width: 2px 	; border-black'
         onChange={handleInput} value={input.name} name='name' />

@@ -33,7 +33,7 @@ return (
                   />
             </div>
 
-  <div className="grid grid-rows-2 grid-flow-col gap-1 justify-start bg-gray-800 p-10">
+  <div className=" gap-1 justify-s grid grid-rows-2 grid-flow-coltart bg-gray-800 p-10">
     
 
         {data !== null && data.map((res) => {

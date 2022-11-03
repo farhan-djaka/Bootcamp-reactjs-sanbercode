@@ -9,19 +9,29 @@ const Tugas5 = () => {
 
   const hitung = (nilai) => {
     if (nilai >= 80) {
-      return "A njay"
+      return (<div className="bg-lime-400 flex justify-center">
+      A
+    </div>)
     }
     if (nilai >= 70 && nilai < 80) {
-      return "B aik"
+      return (<div className="bg-yellow-300 flex justify-center">
+      B
+    </div>)
     }
     if (nilai >= 60 && nilai < 70) {
-      return "C akep"
+      return (<div className="bg-orange-500 flex justify-center">
+      C
+    </div>)
     }
     if (nilai >= 50 && nilai < 60) {
-      return "D on't give up"
+      return (<div className="bg-red-700 flex justify-center  text-teal-50">
+        D
+      </div>)
     }
     if (nilai < 50) {
-      return "E scape from here quickly"
+      return (<div className="bg-red-700 flex justify-center text-teal-50">
+      E
+    </div>) 
     }
   }
 
@@ -37,33 +47,25 @@ const Tugas5 = () => {
 
   }, [])
   
-return (
+return (<div className="bg-yellow-300">
 <Table striped={true}>
-  <Table.Head className="bg bg-red-400">
-    <Table.HeadCell>
+  <Table.Head className=" bg-yellow-300">
+    <Table.HeadCell >
       No
     </Table.HeadCell>
-    <Table.HeadCell>
+    <Table.HeadCell className="bg-yellow-300">
       Mata kuliah
     </Table.HeadCell>
-    <Table.HeadCell>
+    <Table.HeadCell className="bg-yellow-300">
       Nama Mahasiswa
     </Table.HeadCell>
-    <Table.HeadCell>
+    <Table.HeadCell className=" bg-yellow-300">
       Nilai
     </Table.HeadCell>
-    <Table.HeadCell>
+    <Table.HeadCell className=" bg-yellow-300 text-center">
       Predikat
-    </Table.HeadCell>
+    </Table.HeadCell>    
 
-
-
-    
-    <Table.HeadCell>
-      <span className="sr-only">
-        Edit
-      </span>
-    </Table.HeadCell>
   </Table.Head>
   <Table.Body className="divide-y">
  {data !== null && data.map((element ,i)=>(
@@ -86,6 +88,7 @@ return (
   </Table.Row>
  ))}
   </Table.Body>
-</Table>)}
+</Table>
+</div>)}
 
 export default Tugas5
