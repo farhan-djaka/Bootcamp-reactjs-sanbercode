@@ -1,0 +1,25 @@
+  return (
+    <>
+      <div className="grid grid-rows-2 grid-flow-col gap-4">
+
+          {data !== null && data.map((res) => {
+            return (
+              <>
+                <div className="bg-orange-400 rounded-xl p-5 mx-auto py-10 px-8">
+                  <div> {res.title}</div>
+                  <div> {res.job_type}</div>
+                  <div> {res.job_status}</div>
+                  <div> {res.job_type}</div>
+                </div>
+              </>
+            )
+          })}
+
+      </div>
+    </>
+  )
+
+}
+
+
+export default Joblist
