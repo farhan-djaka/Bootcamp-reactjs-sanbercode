@@ -7,8 +7,8 @@ const App = () => {
   return (<>
     <div className="p-10 gap-5">
     {/* <Tugas4/> */}
-    <Tugas5/>
-    {/* <Tugas6/> */}
+    {/* <Tugas5/> */}
+    <Tugas6/>
     </div>
     </>
   )  
