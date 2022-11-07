@@ -25,42 +25,51 @@ console.log(data)
 
 
 return (
-  <div className="flex justify-start  bg-gray-800  ">
-    <div className="w-1/3 bg-gray-800">
-                  <img
-                    src={Cika}
-                    alt="ika"
-                  />
-            </div>
+  
+  <div className="mt-7 flex justify-center //bg-gray-800//  ">
+  <div className="w-1/4 bg-yellow-300 rounded-3xl shadow">
+                <img
+                  src={Cika}
+                  alt="ika"
+                />
+          </div>
 
-  <div className=" gap-1 justify-s grid grid-rows-2 grid-flow-coltart bg-gray-800 p-10">
-    
+<div className="ml-11 w-1/2 grid grid-rows-2 grid-flow-col gap-1 bg-gay-800">
+  
 
-        {data !== null && data.map((res) => {
-          return (
-            <>
-            <div>
-                <div className="bg-gradient-to-r from-yellow-300
-                to-orange-500 rounded-xl p-5 m ">
-                  <div> {res.title}</div>
-                  <div> Method : {res.job_type}</div>
-                  <div>{res.job_qualification}</div>
-                  <div>{res.job_tenure}</div>
-                  <div>{res.job_status}</div>
-                  <div>{res.company_name}</div>
-                  <div>{res.company_image_url}</div>
-                  <div>{res.company_city}</div>
-                  <div>{res.salary_min}</div>
-                  <div>{res.salary_max}</div>
-                  <div> For {res.job_status} </div>
+      {data !== null && data.map((res) => {
+        return (
+          <>
+          <div>
+
+              <div className=" bg-transparent rounded-xl h-36 overflow-y-auto shadow-xl text-cilik text-ellipsis p-2 ">
+                <div className="flex justifty-start gap-y-7 bg-blue-500 rounded-xl text-white">
+                  <img className="w-16 h-fit p-2" src={res.company_image_url} alt = "image"/>
+                  <div className="text-center text-xm my-auto">{res.company_name}</div>
                 </div>
-            </div>
-            </>
+                <div className=""> {res.title}</div>
+                
+                <div className=""> Method : {res.job_type}</div>
+                  <div className="p-0.5 gap-y-7 bg-green-300">
+                  <div className="text-cilik"> require </div>
+                <div className="text-sm">{res.job_qualification}</div>
+                </div>
+                  <div className="">{res.job_tenure}</div>
+                  <div className="">{res.job_status}</div>
+                  <div className="bg-green-500 text-white text-center">{res.company_city}</div>
+              </div>
+          </div>
+ 
+          </>
+
           )
         })}
 
+        
+
            
     </div>
+
   </div>
 )
 

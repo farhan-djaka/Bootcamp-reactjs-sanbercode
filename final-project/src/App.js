@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Navi from './Component/Navi';
 import Foots from './Component/Foots';
@@ -7,14 +7,14 @@ import HeroSecction from './Component/HeroSection';
 const App = () => {
   return (
   <>
-    <div className='bg-white'>
-    <div className='m-5 p-6 rounded-xl' >
-      
-    <Navi/>
-    <HeroSecction/>
+    <div className='bg-gray-800 p-5'>
+        <div className='bg-white p-5 px-10 rounded-xl' >
+          <Navi/>
+          <HeroSecction/>
+        </div>
     <Foots/>
     </div>
-    </div>
+    
   </>
   )
 }
