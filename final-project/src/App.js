@@ -8,7 +8,7 @@ const App = () => {
   return (
   <>
     <div className='bg-gray-800 p-5'>
-        <div className='bg-white p-5 px-10 rounded-xl' >
+        <div className='bg-white p-5 p rounded-xl' >
           <Navi/>
           <HeroSecction/>
         </div>

@@ -16,23 +16,23 @@ console.log(display)
         <>
         <Content/>
         <div>
+               <div className="flex justify-center">
+                <button onClick= {handledisplay} >
+                     
+                    <div className="bg-amber-500 rounded-xl m-5 p-2">
+                        {display ? "hide" : "show"} Joblist
+                    </div>
+                    
+                 </button>
+                </div>
 
-    {display === true ?
+                {display === true ?
     <>
      <Joblist/>
     </>
     : 
     ""
     }
-               <div className="flex justify-center">
-                <button onClick= {handledisplay} >
-                    
-                    <div className="bg-amber-500 rounded-xl m-5 p-2">
-                        Show Joblist
-                    </div>
-                    
-                 </button>
-                </div>
     </div>
     </>
     )

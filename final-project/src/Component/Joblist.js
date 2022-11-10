@@ -26,15 +26,17 @@ console.log(data)
 
 return (
   
-  <div className="mt-7 flex justify-center //bg-gray-800//  ">
-  <div className="w-1/4 bg-yellow-300 rounded-3xl shadow">
+  <div className="mt-7 flex justify-center /bg-gray-800">
+  <div className="hidden sm:block sm:w-1/4 bg-yellow-300 rounded-3xl shadow">
                 <img
                   src={Cika}
                   alt="ika"
                 />
           </div>
 
-<div className="ml-11 w-1/2 grid grid-rows-2 grid-flow-col gap-1 bg-gay-800">
+<div className="sm:ml-11 sm:w-1/2 grid grid-rows-1 grid-cols-3 sm:grid-rows-2 sm:grid-flow-col gap-1 bg-gay-800 p-1
+
+">
   
 
       {data !== null && data.map((res) => {
@@ -44,15 +46,15 @@ return (
 
               <div className=" bg-transparent rounded-xl h-36 overflow-y-auto shadow-xl text-cilik text-ellipsis p-2 ">
                 <div className="flex justifty-start gap-y-7 bg-blue-500 rounded-xl text-white">
-                  <img className="w-16 h-fit p-2" src={res.company_image_url} alt = "image"/>
-                  <div className="text-center text-xm my-auto">{res.company_name}</div>
+                  <img className="hidden sm:block sm:w-16 h-fit p-2" src={res.company_image_url} alt = "inu"/>
+                  <div className="p-2 text-center my-auto">{res.company_name}</div>
                 </div>
                 <div className=""> {res.title}</div>
                 
                 <div className=""> Method : {res.job_type}</div>
                   <div className="p-0.5 gap-y-7 bg-green-300">
                   <div className="text-cilik"> require </div>
-                <div className="text-sm">{res.job_qualification}</div>
+                <div className="">{res.job_qualification}</div>
                 </div>
                   <div className="">{res.job_tenure}</div>
                   <div className="">{res.job_status}</div>
