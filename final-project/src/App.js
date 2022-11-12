@@ -7,8 +7,8 @@ import HeroSecction from './Component/HeroSection';
 const App = () => {
   return (
   <>
-    <div className='bg-gray-800 p-5'>
-        <div className='bg-white p-5 p rounded-xl' >
+    <div className='bg-gradient-to-r from-yellow-400 via-green-400 to-blue-300 p-5  px-10'>
+        <div className='bg-white shadow-2xl shadow-slate-800 rounded-xl' >
           <Navi/>
           <HeroSecction/>
         </div>
