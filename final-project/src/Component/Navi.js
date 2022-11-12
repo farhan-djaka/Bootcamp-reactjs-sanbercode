@@ -8,7 +8,7 @@ import { Modal } from "flowbite-react"
 
 const Navi  =() => {
  return (
-<div className="m-5 flex justify-between">
+<div className="sm:bg-white bg-gray-300 p-3  rounded-t-2xl sm:rounded-t-lg flex justify-between">
     <div className="flex justify-start">
         <img className="w-7 h-fit" alt="yay"
         src={logo}/>

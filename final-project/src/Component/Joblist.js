@@ -26,10 +26,11 @@ console.log(data)
 
 return (
   
-  <div className="mt-7 mb-9 flex justify-center /bg-gray-800">
+  <div className="mt-0 m:mt-7 mb-9 flex justify-center /bg-gray-800">
 
 
-<div className="w-auto mb-9 sm:w-1/2 sm:h-auto sm:grid grid-rows-1 grid-cols-3 sm:grid-flow-cols sm:grid-flow-rows sm:overflow-x-auto gap-3 bg-gay-800 p-1
+<div className="w-auto mb-9  grid-cols-3  p-1
+sm:grid-flow-cols sm:grid-flow-rows sm:overflow-x-auto sm:w-1/2 sm:h-auto sm:grid grid-rows-3 
 
 ">
   
@@ -39,7 +40,7 @@ return (
           <>
           <div>
 
-              <div className="mx-10 bg-white max-h-64 sm:mx-0 gap-y-5 rounded-xl  overflow-y-auto shadow-xl text-cilik text-ellipsis p-2 ">
+              <div className="mx-10 my-5 sm:my-0 bg-white max:h-64 sm:mx-0 gap-y-10 rounded-xl  overflow-y-auto sm:shadow-lg shadow-slate-900 shadow-2xl sm:shadow-slate-500 text-cilik text-ellipsis px-4 pt-4 pb-10 ">
                 <div className="flex justifty-start gap-y-7 bg-blue-500 rounded-xl text-white">
                   <img className="w-12 sm:w-16 h-fit p-2" src={res.company_image_url} alt = "inu"/>
                   <div className="p-2 text-center my-auto">{res.company_name}</div>
