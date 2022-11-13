@@ -2,7 +2,6 @@
 import React, { useState } from "react"
 import { useEffect } from "react"
 import axios from "axios"
-import Cika from '../asset/Cika_Cika_3.png'
 
 
 const Joblist = () => {

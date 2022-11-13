@@ -18,7 +18,7 @@ const Content = () => {
     </div>
         <div className="my-auto flex-col w-auto sm:w-1/2 p-5 rounded-lg">
       <h1 className=" whitespace-nowrap text-xl rounded-t-2xl sm:rounded-t-lg font-semibold shadow-xl sm:shadow-slate-600 sm: mx-auto bg-yellow-300 p-5">IFS-JOB CONNECT</h1>
-      <div className="shadow-xl sm:shadow-slate-600 bg-green-200 sm:bg-gradient-to-b from-white via-white to-green-300 p-3 rounded-b-2xl 
+      <div className="shadow-xl sm:shadow-slate-600 bg-green-00 sm:bg-gradient-to-b from-white via-white to-green-300 p-3 rounded-b-2xl 
       sm:px-16 sm:py-5 sm:h-fit ">
         <div className="text-ellipsis ">
         

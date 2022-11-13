@@ -3,7 +3,6 @@ import logo from "../asset/Logo IFS.png"
 import gmail from "../asset/logo-gmail.png"
 import igimg from "../asset/logo-Instagram.png"
 import waimg from "../asset/logo-wa.png"
-import { Modal } from "flowbite-react"
 
 
 const Navi  =() => {
