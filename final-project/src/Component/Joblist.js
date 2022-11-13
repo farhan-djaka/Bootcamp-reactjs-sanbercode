@@ -28,7 +28,7 @@ return (
   <div className="mt-0 m:mt-7 flex justify-center ">
 
 
-<div className="w-auto grid-cols-1 grid-flow-row  p-1 mx-
+<div className="w-auto grid-cols-1 grid-flow-row  p-1 mx-12
 sm:mx-10 sm:overflow-x-auto sm:w-1/2 sm:h-auto sm:grid sm:grid-cols-3 sm:grid-flow-row
 
 ">
